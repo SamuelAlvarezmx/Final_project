@@ -10,7 +10,7 @@ People with similar ideas usually belong to the same political party, the two ma
 # Description of the  data
 The political system of the US is based on a series of relatively simple electoral rules, based on the logic of the majority (winners takes it all), with highly decentralized electoral management and very little post-election litigation; which has led the US to have one of the most stable electoral systems in the world. Therefore, several institutions and government agencies keep records of the presidential elections since they started. Like exit polls, panel studies, but also they keep track of social issues such as racial indicators, partisanship, perception of security, economy, to name a few.
 
-### American National Election Studies (ANES)
+### 1. American National Election Studies (ANES)
 
 ANES conducts scientific surveys to observe voter behavior and public opinion.
 
@@ -27,8 +27,16 @@ Since 1948, ANES has conducted surveys, usually administered as in-person interv
 - ##### We generate a database from the *Time Series Studies* for the years 2000 to 2020.
   ##### https://electionstudies.org/data-center/anes-time-series-cumulative-data-file/
  
+ ### 2. Harvard Dataverse
+ Harvard's open online repository for sharing, preserving, citing, exploring and analyzing research data.
+ 
+ Harvard Dataverse is an online data repository for share, preserve, cite, explore, and analyze research data. It is open to all researchers, both inside and out of the Harvard community.The Harvard Dataverse repository runs on the open-source web application Dataverse, developed at the Institute for Quantitative Social Science. Dataverse helps make data available to others, and allows to replicate others' work more easily.
+ 
+#### For this project we are going to use:
+- *County Presidential Election Returns 2000-2020*:
+MIT Election Data and Science Lab, 2018, "County Presidential Election Returns 2000-2020", https://doi.org/10.7910/DVN/VOQCHQ, Harvard Dataverse, V11, UNF:6:HaZ8GWG8D2abLleXN3uEig== [fileUNF]
 
-
+##### https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/VOQCHQ
 # Hypothesis
 
 
