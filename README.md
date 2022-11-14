@@ -45,7 +45,8 @@ from https://datacatalog.urban.org/dataset/debt-america-2022 .
 
 - Web site: https://datacatalog.urban.org/dataset/debt-america-2022
 
-![image](https://user-images.githubusercontent.com/43974872/201570070-0e9516da-f464-42dc-894e-80f2834979e4.png)
+![image](https://user-images.githubusercontent.com/43974872/201573665-8612674b-3873-46ca-b8dc-98282cc2ef50.png)
+
 
 ### 3. The Census Bureau, official website of the Unted Srates government
 
