@@ -24,23 +24,28 @@ In this project, we will use as variables for our analysis, all of them at count
 Harvard Dataverse is an online data repository for share, preserve, cite, explore, and analyze research data. It is open to all researchers, both inside and out of the Harvard community.The Harvard Dataverse repository runs on the open-source web application Dataverse, developed at the Institute for Quantitative Social Science. Dataverse helps make data available to others, and allows to replicate others' work more easily.
  
 #### For this project we are going to use:
-- *County Presidential Election Returns 2000-2020*:
+- *County Presidential Election Returns 2000-2020*
+- Data citation:
 MIT Election Data and Science Lab, 2018, "County Presidential Election Returns 2000-2020", https://doi.org/10.7910/DVN/VOQCHQ, Harvard Dataverse, V11, UNF:6:HaZ8GWG8D2abLleXN3uEig== [fileUNF]
+
 - Web site: https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/VOQCHQ
 
-![image](https://user-images.githubusercontent.com/43974872/201559182-958ce1a7-3f80-4453-804f-665b89ca59b4.png)
+![image](https://user-images.githubusercontent.com/43974872/201570335-137d6081-f642-47cb-baeb-f71d5f9e6816.png)
 
-### 2. 
+### 2. Urban Data Catalog, Urban Institute
 
-ANE
-
+The Urban Institute Data Catalog is a place to discover and download open data provided by Urban Institute researchers and data scientists. From here, we are using *Debt in America 2022*  the dataset contains information derived from a random sample of deidentified, consumer-level records from a major credit bureau. The credit bureau data are from February 2022 and contain more than five million records.
 
 #### For this project we are going to use:
-- **: 
-- Web site: 
+- *Debt in America: County-Level Auto Debt*: 
+- Data citation: 
+Alexander Carther, Kassandra Martinchek, Breno Braga, Signe-Mary McKernan, and Caleb
+Quakenbush. 2022. Debt in America February 2022. Accessible
+from https://datacatalog.urban.org/dataset/debt-america-2022 .
 
-![image](https://user-images.githubusercontent.com/43974872/201558964-f0308913-edc1-493f-8bc4-9ae418e765c0.png)
+- Web site: https://datacatalog.urban.org/dataset/debt-america-2022
 
+![image](https://user-images.githubusercontent.com/43974872/201570070-0e9516da-f464-42dc-894e-80f2834979e4.png)
 
 ### 3. The Census Bureau, official website of the Unted Srates government
 
@@ -52,6 +57,6 @@ We know the importance of having reliable databases, that is why we adopt the id
 - *County Population Totals: 2010-2021*
 - Web site: https://www.census.gov/data/datasets/time-series/demo/popest/2020s-counties-total.html
 
-![image](https://user-images.githubusercontent.com/43974872/201558917-04529ecf-d111-4b96-945d-9f0825aa7276.png)
+![image](https://user-images.githubusercontent.com/43974872/201572032-82c557cd-134c-4eea-b0ba-f9fb22c75c67.png)
 
 
