@@ -7,6 +7,9 @@ What makes a citizen vote for a certain party?
 # Selection of topic: 
 People with similar ideas usually belong to the same political party, the two main parties in the US are Republican, and Deomocrat, so which ideas make peope to stay in one party?What cultural, economic, social and political indicators lead to vote for a certain political party.
 
+# Hypothesis: 
+The electorate votes according to their convictions (in theory), but certain indicators show that this is not always the case. And we are going to demonstrate which ones do and which ones do not have an influence on the vote.
+
 # Description of the  data
 The political system of the US is based on a series of relatively simple electoral rules, based on the logic of the majority (winners takes it all), with highly decentralized electoral management and very little post-election litigation; which has led the US to have one of the most stable electoral systems in the world. Therefore, several institutions and government agencies keep records of the presidential elections since they started. Like exit polls, panel studies, but also they keep track of social issues such as racial indicators, partisanship, perception of security, economy, to name a few.
 
@@ -60,4 +63,25 @@ We know the importance of having reliable databases, that is why we adopt the id
 
 ![image](https://user-images.githubusercontent.com/43974872/201572032-82c557cd-134c-4eea-b0ba-f9fb22c75c67.png)
 
+# Final Database structure
+Sample data that mimics the expected final database structure or schema.
 
+Draft machine learning module is connected to the provisional database.
+
+# Machine Learning Model
+Draft of a random forest model:
+1. Generate dummy dataset
+2. Creating a DataFrame with the dummy data
+3. Plotting the dummy data
+4. Use sklearn to split dataset for train and test
+5. Create scaler instance
+6. Fit the scaler
+7. Scale the data
+8. Create a random forest classifier.
+9. Fitting the model
+10. Evaluate the model
+
+# Communication protocols:
+The communication protocols will be based on two elements: 
+1. Daily zoom meetings to give instructions on the steps to follow, assign functions, agree on tasks, define the project itself, and answer questions. 
+2. Constant communication through whatsapp.
