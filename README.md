@@ -1,8 +1,10 @@
+
 # Final_project: 
 Presidential Elections in the US (2000-2020): the ideology behind the citizen vote.
 
 # Abstract: 
-What makes a citizen vote for a certain party?
+What makes a citizen vote for a democrat party?
+
 
 # Selection of topic: 
 People with similar ideas usually belong to the same political party, the two main parties in the US are Republican, and Deomocrat, so which ideas make peope to stay in one party?What cultural, economic, social and political indicators lead to vote for a certain political party.
@@ -66,6 +68,9 @@ We know the importance of having reliable databases, that is why we adopt the id
 # Final Database structure
 Sample data that mimics the expected final database structure or schema.
 
+
+<img src="Resources/Data_base_diagram.png" width="500">
+
 Draft machine learning module is connected to the provisional database.
 
 # Machine Learning Model
@@ -85,3 +90,9 @@ Draft of a random forest model:
 The communication protocols will be based on two elements: 
 1. Daily zoom meetings to give instructions on the steps to follow, assign functions, agree on tasks, define the project itself, and answer questions. 
 2. Constant communication through whatsapp.
+3. Team members: 
+    * Circle - Alejandra López 
+    * Triangle - Dylan Montemayor 
+    * Square - Samuel Alvarez 
+    * X - Eduardo Huerta  
+
