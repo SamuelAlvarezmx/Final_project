@@ -73,8 +73,11 @@ Sample data that mimics the expected final database structure or schema.
 The resources for connecting the model with our data base are stored in an AWS S3. The databases can be be extracted with the following links:
 
 **elections_df:** https://dataanalyticsfinalproject2022.s3.us-east-2.amazonaws.com/Resources/countypres_2000-2020.csv
+
 **population_county:** https://dataanalyticsfinalproject2022.s3.us-east-2.amazonaws.com/Resources/co-est2019-alldata.csv
+
 **debt_df:** https://dataanalyticsfinalproject2022.s3.us-east-2.amazonaws.com/Resources/county_dia_auto_+7+Jun+2022.csv
+
 Draft machine learning module is connected to the provisional database.
 
 # Machine Learning Model
