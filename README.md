@@ -1,4 +1,3 @@
-
 # Final_project: 
 Presidential Elections in the US (2000-2020): the ideology behind the citizen vote.
 
@@ -22,12 +21,12 @@ In this project, we will use as variables for our analysis, all of them at count
 - average income
 - debt
 
- 
+
  ### 1. Harvard Dataverse
  Harvard's open online repository for sharing, preserving, citing, exploring and analyzing research data.
- 
+
 Harvard Dataverse is an online data repository for share, preserve, cite, explore, and analyze research data. It is open to all researchers, both inside and out of the Harvard community.The Harvard Dataverse repository runs on the open-source web application Dataverse, developed at the Institute for Quantitative Social Science. Dataverse helps make data available to others, and allows to replicate others' work more easily.
- 
+
 #### For this project we are going to use:
 - *County Presidential Election Returns 2000-2020*
 - Data citation:
@@ -74,18 +73,25 @@ Sample data that mimics the expected final database structure or schema.
 Draft machine learning module is connected to the provisional database.
 
 # Machine Learning Model
+We chose a Random forest model because of its high accuracy and interpretability. It can easily handle non-linear data and outliers. The input will be in the form of tabular data (no images or natural language). In addition, a random forest model with a sufficient number of estimators and tree depth should be able to perform at a similar capacity to most deep learning models but with less resources.
+
+ It will require preprocessing with (one Hot Encoder) for the categorical variables. Depending on the length of unique values, we might need to bucket certain data.
+
+After having everything in numerical values, we will standardize the data. Because our dataframe is more larger than wider, we will keep the default percentage of training and testing data (75% for training and 25% for testing).
+
+The data will have over 22000 rows, 9 features, and 1 target column. The target will be numerical, 1 for the counties where the Democrat party won and 0 for counties where other parties won. The model will be able to predict if the county will win Democrat according the features (population, income, debt, etc.) that were considered.
+
 Draft of a random forest model:
+
 1. Generate dummy dataset
 2. Creating a DataFrame with the dummy data
-3. Plotting the dummy data
-4. Use sklearn to split dataset for train and test
-5. Create scaler instance
-6. Fit the scaler
-7. Scale the data
-8. Create a random forest classifier.
-9. Fitting the model
-10. Evaluate the model
-
+3. Use sklearn to split datasets for train and test
+4. Create scaler instance
+5. Fit the scaler
+6. Scale the data
+7. Create a random forest classifier.
+8. Fitting the model
+9. Evaluate the model
 # Communication protocols:
 The communication protocols will be based on two elements: 
 1. Daily zoom meetings to give instructions on the steps to follow, assign functions, agree on tasks, define the project itself, and answer questions. 
@@ -95,4 +101,3 @@ The communication protocols will be based on two elements:
     * Triangle - Dylan Montemayor 
     * Square - Samuel Alvarez 
     * X - Eduardo Huerta  
-
