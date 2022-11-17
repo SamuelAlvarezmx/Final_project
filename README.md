@@ -9,7 +9,7 @@ What makes a citizen vote for a democrat party?
 People with similar ideas usually belong to the same political party, the two main parties in the US are Republican, and Democrat, so which ideas make people to stay in one party? What cultural, economic, social and political indicators lead to vote for a certain political party.
 
 # Hypothesis: 
-The electorate votes according to their convictions (in theory), but certain indicators show that this is not always the case. And we are going to demonstrate which ones do and which ones do not have an influence on the vote. We think very strongly  that people whith more debt and where migration percentage is high are inclined to vote for the Democrate party.  
+The electorate votes according to their convictions (in theory), but certain indicators show that this is not always the case. And we are going to demonstrate which ones do and which ones do not have an influence on the vote. We strongly think that people with more debt and less income and also in the places where migration percentage is high are inclined to vote for the Democrate party.  
 
 # Description of the  data
 The political system of the US is based on a series of relatively simple electoral rules, based on the logic of the majority (winners takes it all), with highly decentralized electoral management and very little post-election litigation; which has led the US to have one of the most stable electoral systems in the world. Therefore, several institutions and government agencies keep records of the presidential elections since they started. Like exit polls, panel studies, but also they keep track of social issues such as racial indicators, partisanship, perception of security, economy, to name a few.
