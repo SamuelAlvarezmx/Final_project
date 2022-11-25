@@ -73,10 +73,11 @@ We know the importance of having reliable databases, that is why we adopt the id
 # Final Database structure
 Sample data that mimics the expected final database structure or schema.
 
+![Schema](https://user-images.githubusercontent.com/104656920/203893214-7b7a2fc8-2921-44bd-8dd6-c4339eac9cd4.png)
 
-<img src="Resources/Data_base_diagram.png" width="500">
 
-Draft machine learning module is connected to the provisional database.
+
+Machine learning module is connected to our database stored in AWS RDS.
 
 # Machine Learning Model
 ### Random Forest Model
