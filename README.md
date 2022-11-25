@@ -6,10 +6,10 @@ What makes a citizen vote for a democrat party?
 
 
 # Selection of topic: 
-People with similar ideas usually belong to the same political party, the two main parties in the US are Republican, and Democrat, so which ideas make people to stay in one party? What cultural, economic, social and political indicators lead to vote for a certain political party.
+People with similar ideas usually belong to the same political party, the two main parties in the US are Republican, and Deomocrat, so which ideas make peope to stay in one party?What cultural, economic, social and political indicators lead to vote for a certain political party.
 
 # Hypothesis: 
-The electorate votes according to their convictions (in theory), but certain indicators show that this is not always the case. And we are going to demonstrate which ones do and which ones do not have an influence on the vote. We strongly think that people with more debt and less income and also in the places where migration percentage is high are inclined to vote for the Democrate party.  
+The electorate votes according to their convictions (in theory), but certain indicators show that this is not always the case. And we are going to demonstrate which ones do and which ones do not have an influence on the vote. HYPOTHESIS NOT 
 
 # Description of the  data
 The political system of the US is based on a series of relatively simple electoral rules, based on the logic of the majority (winners takes it all), with highly decentralized electoral management and very little post-election litigation; which has led the US to have one of the most stable electoral systems in the world. Therefore, several institutions and government agencies keep records of the presidential elections since they started. Like exit polls, panel studies, but also they keep track of social issues such as racial indicators, partisanship, perception of security, economy, to name a few.
@@ -70,36 +70,73 @@ Sample data that mimics the expected final database structure or schema.
 
 <img src="Resources/Data_base_diagram.png" width="500">
 
-The resources for connecting the model with our data base are stored in an AWS S3. The databases can be be extracted with the following links:
-
-**elections_df:** https://dataanalyticsfinalproject2022.s3.us-east-2.amazonaws.com/Resources/countypres_2000-2020.csv
-
-**population_county:** https://dataanalyticsfinalproject2022.s3.us-east-2.amazonaws.com/Resources/co-est2019-alldata.csv
-
-**debt_df:** https://dataanalyticsfinalproject2022.s3.us-east-2.amazonaws.com/Resources/county_dia_auto_+7+Jun+2022.csv
-
 Draft machine learning module is connected to the provisional database.
 
 # Machine Learning Model
-We chose a Random forest model because of its high accuracy and interpretability. It can easily handle non-linear data and outliers. The input will be in the form of tabular data (no images or natural language). In addition, a random forest model with a sufficient number of estimators and tree depth should be able to perform at a similar capacity to most deep learning models but with less resources.
+### Random Forest Model
 
- It will require preprocessing with (one Hot Encoder) for the categorical variables. Depending on the length of unique values, we might need to bucket certain data.
+We chose a Random forest model because of its high accuracy and interpretability. It can easily handle non-linear data and outliers. The input will be in the form of tabular data (no images or natural language). In addition, a random forest model with a sufficient number of estimators and tree depth should be able to perform at a similar capacity to most deep learning models but with fewer resources.
 
-After having everything in numerical values, we will standardize the data. Because our dataframe is more larger than wider, we will keep the default percentage of training and testing data (75% for training and 25% for testing).
+Since we have everything in numerical values, we will only need to standardize the data. 
 
-The data will have over 22000 rows, 9 features, and 1 target column. The target will be numerical, 1 for the counties where the Democrat party won and 0 for counties where other parties won. The model will be able to predict if the county will win Democrat according the features (population, income, debt, etc.) that were considered.
+The data have 1619 rows, 14 features, and 1 target column. The target will be numerical, 1 for the counties where the Democrat party won and 0 for counties where other parties won. The model will be able to predict if the county will win Democrat according to the features (population, income, debt, etc.) that were considered.
 
-Draft of a random forest model:
+1. Read the final CSV file with the merged data
 
-1. Generate dummy dataset
-2. Creating a DataFrame with the dummy data
+The code reads the file locally but we will adjust it to read it directly from AWS.
+
+2. Creating a DataFrame and preprocessing the data
+
+<u>Preprocessing</u>
+
+We had a value that needed to be changed for the three debt columns. We used the replace pandas method for that. 
+
+![preprocessing]()
+
+Nothing else needs to be changed since we already cleaned the data before merging it with Postgres. In addition, we used an inner join to ensure that we wouldn't have missing values in other columns. 
+
+<u>Feature selection</u>
+
+We started with 14 columns. We dropped the "county_name" since it is not in a number format and it is a key value. After trying out the model, we noticed that there were features that were part of the target, so we decided to drop them too.
+
+![drop_columns]()
+
+We ended with eight main features: "popestimate2019", "internationalmig2019", "debt_all","debt_communities_color", "debt_majorities_white", "avg_household_income_all", "avg_non_white_income" and "avrg_non_hispanic"
+
+<u>Define the target</u>
+
+The target column is called "winner" and as mentioned before, the number 1 represents when the democrat won and 0 when any other party won for each county. 
+
 3. Use sklearn to split datasets for train and test
+
+Because our data frame is larger than wider, we kept the default percentage of training and testing data (75% for training and 25% for testing).
+
 4. Create scaler instance
+
+Even though all our features have numerical values, It is important to create the scaler instance because the proportion among them is different. There are some decimals that represent the percentages and there are some values in thousands. 
+
 5. Fit the scaler
+
 6. Scale the data
-7. Create a random forest classifier.
-8. Fitting the model
-9. Evaluate the model
+
+7. Create a random forest classifier, fit the model and evaluate it
+
+For the random forest classifier, we decided to try three different numbers of estimators: 80, 128, and 200. After running the three of them, we noticed that 128 got the best value. Neither increasing nor decreasing that number improved the accuracy. 
+
+![random_forest_accuracy]()
+
+
+
+### Logistic Regression Model (Alternative)
+
+We decided to use the logistic regression model because, with a combination of input variables, it can predict the probability of the input data belonging to one of two groups. We used the parameter "lbfgs" which is an algorithm for learning and optimization.  
+
+We didn´t consider a neural network because the dataset has less than 2000 values and we have few numerical features. 
+
+![logistic_accuracy]()
+
+
+
 # Communication protocols:
 The communication protocols will be based on two elements: 
 1. Daily zoom meetings to give instructions on the steps to follow, assign functions, agree on tasks, define the project itself, and answer questions. 
