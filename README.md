@@ -158,5 +158,12 @@ The communication protocols will be based on two elements:
  
  ### GoogleSlides:
   **https://docs.google.com/presentation/d/13e7vDX2GU76RK9Her7Cd2wXU1dyC0MMxA1HDaJyE5vA/edit?usp=sharing**
+  
+ # Dashboard
+ 
+ ### Tableu Public:
+ 
+ https://public.tableau.com/app/profile/samuel6259/viz/finalproject_16697764879210/Story1?publish=yes
+ 
  
  
