@@ -6,7 +6,7 @@ What makes a citizen vote for a democrat party?
 
 
 # Selection of topic: 
-People with similar ideas usually belong to the same political party, the two main parties in the US are Republican, and Deomocrat, so which ideas make peope to stay in one party?What cultural, economic, social and political indicators lead to vote for a certain political party.
+People with similar ideas usually belong to the same political party, the two main parties in the US are Republican, and Deomocrat, so which ideas make people to stay in one party? What cultural, economic, social and political indicators lead to vote for a certain political party? In this project we will dive into these features.
 
 # Hypothesis: 
 The electorate votes according to their convictions (in theory), but certain indicators show that this is not always the case. And we are going to demonstrate which ones do and which ones do not have an influence on the vote. We strongly think that people with more debt and less income and also in the places where migration percentage is high are inclined to vote for the Democratic party.
@@ -88,11 +88,11 @@ Since we have everything in numerical values, we will only need to standardize t
 
 The data have 1619 rows, 14 features, and 1 target column. The target will be numerical, 1 for the counties where the Democrat party won and 0 for counties where other parties won. The model will be able to predict if the county will win Democrat according to the features (population, income, debt, etc.) that were considered.
 
-1. Read the final CSV file with the merged data
+**1. Read the final CSV file with the merged data**
 
 The code reads the file locally but we will adjust it to read it directly from AWS.
 
-2. Creating a DataFrame and preprocessing the data
+**2. Creating a DataFrame and preprocessing the data**
 
 <u>Preprocessing</u>
 
@@ -114,19 +114,23 @@ We ended with eight main features: "popestimate2019", "internationalmig2019", "d
 
 The target column is called "winner" and as mentioned before, the number 1 represents when the democrat won and 0 when any other party won for each county. 
 
-3. Use sklearn to split datasets for train and test
+**3. Use sklearn to split datasets for train and test**
 
 Because our data frame is larger than wider, we kept the default percentage of training and testing data (75% for training and 25% for testing).
 
-4. Create scaler instance
+**4. Create scaler instance**
 
-Even though all our features have numerical values, It is important to create the scaler instance because the proportion among them is different. There are some decimals that represent the percentages and there are some values in thousands. 
+Even though all our features have numerical values, it is important to create the scaler instance because the proportion among them is different. There are some decimals that represent the percentages and there are some values in thousands. 
 
-5. Fit the scaler
+**5. Fit the scaler**
+Before we fit the random forest model to our X_train_scaled and y_train training data, we'll create a random forest instance using the random forest classifier.
 
-6. Scale the data
+The n_estimators will allow us to set the number of trees that will be created by the algorithm. Generally, the higher number makes the predictions stronger and more stable, but can slow down the output because of the higher training time allocated. The best practice is to use between 64 and 128 random forests, though higher numbers are quite common despite the higher training time.
 
-7. Create a random forest classifier, fit the model and evaluate it
+**6. Scale the data**
+To scale the data in this DataFrame, we'll first import the StandardScaler module and create an instance of it. Then The next step is to train the scaler and transform the data.
+
+**7. Create a random forest classifier, fit the model and evaluate it**
 
 For the random forest classifier, we decided to try three different numbers of estimators: 80, 128, and 200. After running the three of them, we noticed that 128 got the best value. Neither increasing nor decreasing that number improved the accuracy. 
 
@@ -142,17 +146,6 @@ We didn´t consider a neural network because the dataset has less than 2000 valu
 
 ![logistic_accuracy](https://github.com/SamuelAlvarezmx/Final_project/blob/Model/Resources/logistic_accuracy.png)
 
-
-
-# Communication protocols:
-The communication protocols will be based on two elements: 
-1. Daily zoom meetings to give instructions on the steps to follow, assign functions, agree on tasks, define the project itself, and answer questions. 
-2. Constant communication through whatsapp.
-3. Team members: 
-    * Circle - Alejandra López 
-    * Triangle - Dylan Montemayor 
-    * Square - Samuel Alvarez 
-    * X - Eduardo Huerta
     
  # Executive Presentation
  
