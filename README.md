@@ -98,15 +98,13 @@ The code reads the file locally but we will adjust it to read it directly from A
 
 We had a value that needed to be changed for the three debt columns. We used the replace pandas method for that. 
 
-![preprocessing](https://github.com/SamuelAlvarezmx/Final_project/blob/Model/Resources/preprocessing.png)
+![preprocessing](https://github.com/SamuelAlvarezmx/Final_project/blob/main/MLModel/Resources/preprocessing.png)
 
 Nothing else needs to be changed since we already cleaned the data before merging it with Postgres. In addition, we used an inner join to ensure that we wouldn't have missing values in other columns. 
 
 <u>Feature selection</u>
 
 We started with 14 columns. We dropped the "county_name" since it is not in a number format and it is a key value. After trying out the model, we noticed that there were features that were part of the target, so we decided to drop them too.
-
-![drop_columns](https://github.com/SamuelAlvarezmx/Final_project/blob/Model/Resources/drop_columns.png)
 
 We ended with eight main features: "popestimate2019", "internationalmig2019", "debt_all","debt_communities_color", "debt_majorities_white", "avg_household_income_all", "avg_non_white_income" and "avrg_non_hispanic"
 
@@ -134,7 +132,7 @@ To scale the data in this DataFrame, we'll first import the StandardScaler modul
 
 For the random forest classifier, we decided to try three different numbers of estimators: 80, 128, and 200. After running the three of them, we noticed that 128 got the best value. Neither increasing nor decreasing that number improved the accuracy. 
 
-![random_forest_accuracy](https://github.com/SamuelAlvarezmx/Final_project/blob/Model/Resources/random_forest_accuracy.png)
+![random_forest_accuracy](https://github.com/SamuelAlvarezmx/Final_project/blob/main/MLModel/Resources/random_forest_accuracy.png)
 
 
 
@@ -144,7 +142,7 @@ We decided to use the logistic regression model because, with a combination of i
 
 We didn´t consider a neural network because the dataset has less than 2000 values and we have few numerical features. 
 
-![logistic_accuracy](https://github.com/SamuelAlvarezmx/Final_project/blob/Model/Resources/logistic_accuracy.png)
+![logistic_accuracy](https://github.com/SamuelAlvarezmx/Final_project/blob/main/MLModel/Resources/logistic_accuracy.png)
 
     
  # Executive Presentation
