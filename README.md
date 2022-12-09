@@ -158,5 +158,6 @@ We didn´t consider a neural network because the dataset has less than 2000 valu
  
  https://public.tableau.com/app/profile/samuel6259/viz/finalproject_16697764879210/Story1?publish=yes
  
+ # Conclusion
  
- 
+ The predictive model shows with accuracy on the counties that the Democratic Party will win given the previous county characteristics. However, the importance of the model lies in the high sensitivity of the non-democratic counties, since for this reason the Democratic Party will be able to focus its efforts and resources on winning said counties, because the objective of any political party is to win the largest number of votes.
