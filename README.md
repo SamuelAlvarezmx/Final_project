@@ -121,11 +121,13 @@ Because our data frame is larger than wider, we kept the default percentage of t
 Even though all our features have numerical values, it is important to create the scaler instance because the proportion among them is different. There are some decimals that represent the percentages and there are some values in thousands. 
 
 **5. Fit the scaler**
+
 Before we fit the random forest model to our X_train_scaled and y_train training data, we'll create a random forest instance using the random forest classifier.
 
 The n_estimators will allow us to set the number of trees that will be created by the algorithm. Generally, the higher number makes the predictions stronger and more stable, but can slow down the output because of the higher training time allocated. The best practice is to use between 64 and 128 random forests, though higher numbers are quite common despite the higher training time.
 
 **6. Scale the data**
+
 To scale the data in this DataFrame, we'll first import the StandardScaler module and create an instance of it. Then The next step is to train the scaler and transform the data.
 
 **7. Create a random forest classifier, fit the model and evaluate it**
